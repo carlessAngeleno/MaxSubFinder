@@ -24,5 +24,8 @@ def main(arr):
 
 
 if __name__ == '__main__':
-    arr = [int(arg) for arg in argv[1:]]
-    main(arr)
+    try:
+        arr = [int(arg) for arg in argv[1:]]
+        main(arr)
+    except ValueError as detail:
+        print 'Invalid input - please provide integers!'
